@@ -2186,6 +2186,10 @@ static void cliSet(char *cmdline)
 
                 bool changeValue = false;
                 int_float_value_t tmp;
+                /* init */
+                tmp.float_value = 0;
+                tmp.int_value = 0;
+                /*------*/
                 switch (valueTable[i].type & VALUE_MODE_MASK) {
                     case MODE_DIRECT: {
                             int32_t value = 0;
