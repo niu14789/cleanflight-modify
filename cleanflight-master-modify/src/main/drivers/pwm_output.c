@@ -127,7 +127,7 @@ static pwmOutputPort_t *pwmOutConfig(const timerHardware_t *timerHardware, uint8
 
 static void pwmWriteBrushed(uint8_t index, uint16_t value)
 {
-    *motors[index]->ccr = (value - 1000) * motors[index]->period / 1000;
+    *motors[index]->ccr = (value - 1000) * 1.2 * motors[index]->period / 1000;
 }
 
 static void pwmWriteStandard(uint8_t index, uint16_t value)

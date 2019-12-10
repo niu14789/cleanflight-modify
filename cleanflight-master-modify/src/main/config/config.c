@@ -72,9 +72,6 @@
 #include "config/config_profile.h"
 #include "config/config_master.h"
 
-#define BRUSHED_MOTORS_PWM_RATE 16000
-#define BRUSHLESS_MOTORS_PWM_RATE 400
-
 void useRcControlsConfig(modeActivationCondition_t *modeActivationConditions, escAndServoConfig_t *escAndServoConfigToUse, pidProfile_t *pidProfileToUse);
 
 #if !defined(FLASH_SIZE)

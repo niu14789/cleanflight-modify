@@ -154,6 +154,12 @@ void init(void)
     ensureEEPROMContainsValidData();
     readEEPROM();
 
+#ifdef BRUSHED_MOTORS
+    masterConfig.motor_pwm_rate = BRUSHED_MOTORS_PWM_RATE;
+#else
+    masterConfig.motor_pwm_rate = BRUSHLESS_MOTORS_PWM_RATE;
+#endif
+
     systemState |= SYSTEM_STATE_CONFIG_LOADED;
 
 #ifdef STM32F303
